@@ -1,0 +1,96 @@
+.body {
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #777;
+    line-height: 1.7;
+}
+
+.navbar-brand span {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+a{
+    color: #222;
+    text-decoration: none;
+    transition: all 0.4s;
+}
+a:hover {
+    color: rgb(49, 209, 105);;
+}
+
+.btn {
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.25rem;
+}
+
+.btn-find {
+    background-color: rgb(49, 209, 105);
+    color: #fff;
+    border-color: rgb(49, 209, 105);
+    font-weight: 500;
+}
+.btn-find:hover {
+    background-color: rgb(51, 227, 112);
+    color: #fff;
+}
+
+.navbar ul li a {
+    font-weight: 500;
+}
+
+
+/* Slider */
+.c-item{
+    height: 600px;
+    /* width: 1200px; */
+    /* margin: 2rem; */
+}
+
+.c-img{
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+.carousel-control-prev, .carousel-control-next{
+    margin: none;
+}
+
+/* Sub Menu */
+.submenu{
+    height: 200px;
+    width: 100%;
+    margin: 2rem;
+}
+
+.submenu button{
+    width: 150px;
+    height: 150px;
+    margin: 1rem 2rem 1rem 2rem;
+
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.navbar ul li a{
+    padding: 0 1.5rem 0 1.5rem;
+} 
+
+.submenu-options button{
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+.info div i{
+    margin-right: 1.5rem;
+}
+.info div p{
+    display:inline-block;
+}
