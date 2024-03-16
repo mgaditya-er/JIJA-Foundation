@@ -1,9 +1,21 @@
-.body {
+html, body {
+    margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
     color: #777;
-    line-height: 1.7;
+    line-height: 1.6;
+    word-spacing: 1.4px;
+    overflow-x:hidden;
+    max-width: 100%;
 }
+
+/* Navbar */
+.navbar a span img{
+    width: 60px;
+    border-radius: 2px;
+    margin:0px;
+}
+
 
 .navbar-brand span {
     font-weight: 700;
@@ -39,12 +51,21 @@ a:hover {
     font-weight: 500;
 }
 
+.navbar{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.navbar ul li a{
+    padding: 0 1.5rem 0 1.5rem;
+}
+/* navbar ends */
+
 
 /* Slider */
 .c-item{
-    height: 600px;
-    /* width: 1200px; */
-    /* margin: 2rem; */
+    height: 640px;
 }
 
 .c-img{
@@ -56,36 +77,40 @@ a:hover {
 .carousel-control-prev, .carousel-control-next{
     margin: none;
 }
+/* slider ends */
 
 /* Sub Menu */
 .submenu{
     height: 200px;
-    width: 100%;
-    margin: 2rem;
+    /* width: 80vw; */
+}
+
+.submenu-options{
+    width: 80%;
 }
 
 .submenu button{
     width: 150px;
     height: 150px;
-    margin: 1rem 2rem 1rem 2rem;
-
 }
-
-.navbar{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.navbar ul li a{
-    padding: 0 1.5rem 0 1.5rem;
-} 
 
 .submenu-options button{
     font-size: 1.25rem;
     font-weight: bold;
     margin: 0;
     margin-bottom: 1rem;
+}
+/* submenu ends */
+
+/* Footer */
+footer{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+footer div .container{
+    width: 60%;
 }
 
 .info div i{
@@ -94,3 +119,8 @@ a:hover {
 .info div p{
     display:inline-block;
 }
+
+.aboutus .handles i{
+    padding: 4px;
+}
+/* Footer ends */
