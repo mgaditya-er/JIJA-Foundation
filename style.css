@@ -84,6 +84,7 @@ a:hover {
     height: 200px;
     /* width: 80vw; */
 }
+/* @media (min-width: 768px) { height: 350px; } */
 
 .submenu-options{
     width: 80%;
