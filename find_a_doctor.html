@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Doctor Finder</title>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor Finder</title>
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
     crossorigin="anonymous"></script>
+
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <!-- <link rel="stylesheet" href="stytlesheetforhomepage.css"> -->
 
   <!-- Fontawesome cdn -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -23,12 +27,13 @@
 
   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </head>
+
 <body>
-    <!-- Navbar -->
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-gl shadow bg-white p-0">
     <div class="container-fluid shadow-sm ps-4">
       <a class="navbar-brand" href="#homepage">
-        <span><img src="D:\Projects\jija foundation\assets\jija logo.jpg" alt="logo"></span>
+        <span><img src="./assets/jija logo.png" alt="logo"></span>
         <span>JIJA Foundation</span>
       </a>
     </div>
@@ -55,68 +60,75 @@
       </ul>
     </div>
   </nav>
-<img src="assets/doctor.jpeg" style="position: relative;height:500px;width: 1350px;">
-<div class="container" style="background-color: rgb(94, 170, 246);border: black;" >
-<div class="dropdowndoctors" style="position: absolute;top: 50px;background-color: rgb(107, 176, 244); border: 3px solid black;border-radius: 10px;transform: translate(820px,120px);">
-    
-<label for="specialtySelect" style="justify-content: center;text-align: center;margin: 10px;">Select Doctor:</label>
-<select id="specialtySelect" style="margin: 5px;border-radius: 5px;text-align: center;">
-  <option value="">Select Doctor name</option>
-  <option value="Dr. Aarav Kapoor">Dr. Aarav Kapoor</option>
-  <option value="Dr. Diya Sharma">Dr. Diya Sharma</option>
-  <option value="Dr. Arjun Singhania">Dr. Arjun Singhania</option>
-  <option value="Dr. Kavya Reddy">Dr. Kavya Reddy</option>
-  <option value="Dr. Rohit Verma">Dr. Rohit Verma</option>
-  <option value="Dr. Naina Gupta">Dr. Naina Gupta</option>
-  <option value="Dr. Vikram Patel">Dr. Vikram Patel</option>
-  <option value="Dr. Ananya Mishra">Dr. Ananya Mishra</option>
-  <option value="Dr. Pranav Khurana">Dr. Pranav Khurana</option>
-  <option value="Dr. Riya Thakur">Dr. Riya Thakur</option>
-  <option value="Dr. Arnav Desai">Dr. Arnav Desai</option>
-  <option value="Dr. Nandini Mehta">Dr. Nandini Mehta</option>
-  <option value="Dr. Yuvraj Singh">Dr. Yuvraj Singh</option>
-  <option value="Dr. Simran Kapoor">Dr. Simran Kapoor</option>
-  <option value="Dr. Armaan Malhotra">Dr. Armaan Malhotra</option>
-</select>
 
-<div id="doctorInfo"></div>
+  <!-- Dropdown element -->
+  <img src="assets/doctor.jpeg" style="position: relative;height:500px;width: 1350px;">
+  <div class="container" style="background-color: rgb(94, 170, 246);border: black;">
+    <div class="dropdowndoctors"
+      style="position: absolute;top: 50px;background-color: rgb(107, 176, 244); border: 3px solid black;border-radius: 10px;transform: translate(820px,120px);">
 
-</div>
-</div>
+      <label for="specialtySelect" style="justify-content: center;text-align: center;margin: 10px;">Select
+        Doctor:</label>
+      <select id="specialtySelect" style="margin: 5px;border-radius: 5px;text-align: center;">
+        <option value="">Select Doctor name</option>
+        <option value="Dr. Aarav Kapoor">Dr. Aarav Kapoor</option>
+        <option value="Dr. Diya Sharma">Dr. Diya Sharma</option>
+        <option value="Dr. Arjun Singhania">Dr. Arjun Singhania</option>
+        <option value="Dr. Kavya Reddy">Dr. Kavya Reddy</option>
+        <option value="Dr. Rohit Verma">Dr. Rohit Verma</option>
+        <option value="Dr. Naina Gupta">Dr. Naina Gupta</option>
+        <option value="Dr. Vikram Patel">Dr. Vikram Patel</option>
+        <option value="Dr. Ananya Mishra">Dr. Ananya Mishra</option>
+        <option value="Dr. Pranav Khurana">Dr. Pranav Khurana</option>
+        <option value="Dr. Riya Thakur">Dr. Riya Thakur</option>
+        <option value="Dr. Arnav Desai">Dr. Arnav Desai</option>
+        <option value="Dr. Nandini Mehta">Dr. Nandini Mehta</option>
+        <option value="Dr. Yuvraj Singh">Dr. Yuvraj Singh</option>
+        <option value="Dr. Simran Kapoor">Dr. Simran Kapoor</option>
+        <option value="Dr. Armaan Malhotra">Dr. Armaan Malhotra</option>
+      </select>
 
-<script>
-$(document).ready(function(){
-    // Load JSON file
-    $.getJSON("doctors.json", function(data) {
+      <div id="doctorInfo"></div>
+
+    </div>
+  </div>
+
+  <!-- javascript -->
+  <script>
+    $(document).ready(function () {
+      // Load JSON file
+      $.getJSON("doctors.json", function (data) {
         // Handle select change event
-        $("#specialtySelect").change(function() {
-            var selectedSpecialty = $(this).val();
-            if (selectedSpecialty) {
-                var doctors = data.doctors.filter(function(doctor) {
-                    return doctor.name === selectedSpecialty;
-                });
-                if (doctors.length > 0) {
-                    var doctorInfoHtml = "<h2>" + selectedSpecialty + "</h2>";
-                    doctorInfoHtml += "<ul>";
-                    doctors.forEach(function(doctor) {
-                        doctorInfoHtml += "<li><strong>Name:</strong> " + doctor.name + "<br>";
-                        doctorInfoHtml += "<strong>Location:</strong> " + doctor.location + "<br>";
-                        doctorInfoHtml += "<strong>Specialtity:</strong> " + doctor.specialty + "<br>";
-                        doctorInfoHtml += "<strong>Contact:</strong> " + doctor.contact + "</li>";
-                    });
-                    doctorInfoHtml += "</ul>";
-                    $("#doctorInfo").html(doctorInfoHtml);
-                } else {
-                    $("#doctorInfo").html("<p>No doctors found for this specialty.</p>");
-                }
+        $("#specialtySelect").change(function () {
+          var selectedSpecialty = $(this).val();
+          if (selectedSpecialty) {
+            var doctors = data.doctors.filter(function (doctor) {
+              return doctor.name === selectedSpecialty;
+            });
+            if (doctors.length > 0) {
+              var doctorInfoHtml = "<h2>" + selectedSpecialty + "</h2>";
+              doctorInfoHtml += "<ul>";
+              doctors.forEach(function (doctor) {
+                doctorInfoHtml += "<li><strong>Name:</strong> " + doctor.name + "<br>";
+                doctorInfoHtml += "<strong>Location:</strong> " + doctor.location + "<br>";
+                doctorInfoHtml += "<strong>Specialtity:</strong> " + doctor.specialty + "<br>";
+                doctorInfoHtml += "<strong>Contact:</strong> " + doctor.contact + "</li>";
+              });
+              doctorInfoHtml += "</ul>";
+              $("#doctorInfo").html(doctorInfoHtml);
             } else {
-                $("#doctorInfo").empty();
+              $("#doctorInfo").html("<p>No doctors found for this specialty.</p>");
             }
+          } else {
+            $("#doctorInfo").empty();
+          }
         });
+      });
     });
-});
-</script>
-<section class="card">
+  </script>
+
+  <!-- Cards -->
+  <section class="card">
     <div class="cards" style="display: inline-block;">
       <div class="card mb-3"
         style="max-width: 400px;max-height:210px;display: inline-block;margin-left:40px;margin-top: 50px;">
@@ -236,11 +248,10 @@ $(document).ready(function(){
 
     </div>
   </section>
-</section>
 
-<!-- Footer -->
-<footer class="bg-success text-white bg-opacity-75 bg-gradient">
-    <div class="container-fluid p-3 m-4 text-bg-primary">
+  <!-- Footer -->
+  <footer class="bg-success text-white bg-opacity-75 bg-gradient">
+    <div class="container-fluid p-3 m-4">
       <div class="row">
         <div class="col-sm-6 aboutus">
           <p class="h6"><u>About Us</u></p>
@@ -277,4 +288,5 @@ $(document).ready(function(){
   </footer>
 
 </body>
+
 </html>
