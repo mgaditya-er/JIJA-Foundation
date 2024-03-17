@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doctor Finder</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
@@ -23,36 +23,22 @@
 
   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </head>
-
-<body style="padding: 0; font-family:'Roboto', sans-serif; color: #777; line-height: 1.7;">
-  <!-- As a link
-<nav class="navbar bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#"><b>JiJa Foundation</b></a>
-    </div>
-  </nav> -->
-
-  <!-- As a heading
-  <nav class="navbar bg-light">
-    <div class="container-fluid">
-      <span class="navbar-brand mb-0 h1"></span>
-    </div>
-  </nav> -->
-
-  <!-- Navbar -->
+<body>
+    <!-- Navbar -->
   <nav class="navbar navbar-expand-gl shadow bg-white p-0">
-    <div class="container-fluid shadow-sm">
+    <div class="container-fluid shadow-sm ps-4">
       <a class="navbar-brand" href="#homepage">
+        <span><img src="D:\Projects\jija foundation\assets\jija logo.jpg" alt="logo"></span>
         <span>JIJA Foundation</span>
       </a>
     </div>
     <div class="navbar">
       <ul class="nav">
         <li class="nav-item">
-          <a class="nav-link active" href="index.html" target="_self">Home</a>
+          <a class="nav-link active" href="#home">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="aboutus.html" target="_self">About</a>
+          <a class="nav-link" href="#aboutus">About</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="contact.html" target="_self">Contact</a>
@@ -61,7 +47,7 @@
           <a class="nav-link" href="#reserach">Research</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#services&clinics">Services & Clinics</a>
+          <a class="nav-link" href="services.html" target="_self">Services & Clinics</a>
         </li>
         <li>
           <a href="find_a_doctor.html" class="btn btn-find" target="_self">Find a doctor</a>
@@ -69,157 +55,200 @@
       </ul>
     </div>
   </nav>
+<img src="assets/doctor.jpeg" style="position: relative;height:500px;width: 1350px;">
+<div class="container" style="background-color: rgb(94, 170, 246);border: black;" >
+<div class="dropdowndoctors" style="position: absolute;top: 50px;background-color: rgb(107, 176, 244); border: 3px solid black;border-radius: 10px;transform: translate(820px,120px);">
+    
+<label for="specialtySelect" style="justify-content: center;text-align: center;margin: 10px;">Select Doctor:</label>
+<select id="specialtySelect" style="margin: 5px;border-radius: 5px;text-align: center;">
+  <option value="">Select Doctor name</option>
+  <option value="Dr. Aarav Kapoor">Dr. Aarav Kapoor</option>
+  <option value="Dr. Diya Sharma">Dr. Diya Sharma</option>
+  <option value="Dr. Arjun Singhania">Dr. Arjun Singhania</option>
+  <option value="Dr. Kavya Reddy">Dr. Kavya Reddy</option>
+  <option value="Dr. Rohit Verma">Dr. Rohit Verma</option>
+  <option value="Dr. Naina Gupta">Dr. Naina Gupta</option>
+  <option value="Dr. Vikram Patel">Dr. Vikram Patel</option>
+  <option value="Dr. Ananya Mishra">Dr. Ananya Mishra</option>
+  <option value="Dr. Pranav Khurana">Dr. Pranav Khurana</option>
+  <option value="Dr. Riya Thakur">Dr. Riya Thakur</option>
+  <option value="Dr. Arnav Desai">Dr. Arnav Desai</option>
+  <option value="Dr. Nandini Mehta">Dr. Nandini Mehta</option>
+  <option value="Dr. Yuvraj Singh">Dr. Yuvraj Singh</option>
+  <option value="Dr. Simran Kapoor">Dr. Simran Kapoor</option>
+  <option value="Dr. Armaan Malhotra">Dr. Armaan Malhotra</option>
+</select>
 
-  <section id="img1">
-    <img src="./assets/doctor.jpeg" style="height: 600px;width: 1350px;position: relative;">
-    <div class="dropdown" style="position: absolute;bottom: 100px;left: 580px;">
-      <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"
-        style="color: black;background-color: rgb(0, 128, 79);width: 250px;">
-        Select specialities<i class='bx bx-chevron-down'
-          style="font-size: 20px; text-align: center;justify-items: center;"></i>
-      </button>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">Cardiology</a></li>
-        <li><a class="dropdown-item" href="#">cancer</a></li>
-        <li><a class="dropdown-item" href="#">heart</a></li>
-        <li><a class="dropdown-item" href="#">dental</a></li>
-        <li><a class="dropdown-item" href="#">head & neck</a></li>
-        <li><a class="dropdown-item" href="#">Pain clinic</a></li>
-      </ul>
-    </div>
-    <section class="card">
-      <div class="cards" style="display: inline-block;">
-        <div class="card mb-3"
-          style="max-width: 400px;max-height:210px;display: inline-block;margin-left:40px;margin-top: 50px;">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img src="./assets/doctor.jpeg" class="img-fluid rounded-start" alt="..."
-                style="height: 210px;width:200px;align-items: center;">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Dr. Vaishali kurul</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.</p>
-                <button type="button" class="btn btn-success btn-sm"
-                  style="position: absolute;bottom: 5px;right:10px">Contact</button>
+<div id="doctorInfo"></div>
 
-              </div>
+</div>
+</div>
+
+<script>
+$(document).ready(function(){
+    // Load JSON file
+    $.getJSON("doctors.json", function(data) {
+        // Handle select change event
+        $("#specialtySelect").change(function() {
+            var selectedSpecialty = $(this).val();
+            if (selectedSpecialty) {
+                var doctors = data.doctors.filter(function(doctor) {
+                    return doctor.name === selectedSpecialty;
+                });
+                if (doctors.length > 0) {
+                    var doctorInfoHtml = "<h2>" + selectedSpecialty + "</h2>";
+                    doctorInfoHtml += "<ul>";
+                    doctors.forEach(function(doctor) {
+                        doctorInfoHtml += "<li><strong>Name:</strong> " + doctor.name + "<br>";
+                        doctorInfoHtml += "<strong>Location:</strong> " + doctor.location + "<br>";
+                        doctorInfoHtml += "<strong>Specialtity:</strong> " + doctor.specialty + "<br>";
+                        doctorInfoHtml += "<strong>Contact:</strong> " + doctor.contact + "</li>";
+                    });
+                    doctorInfoHtml += "</ul>";
+                    $("#doctorInfo").html(doctorInfoHtml);
+                } else {
+                    $("#doctorInfo").html("<p>No doctors found for this specialty.</p>");
+                }
+            } else {
+                $("#doctorInfo").empty();
+            }
+        });
+    });
+});
+</script>
+<section class="card">
+    <div class="cards" style="display: inline-block;">
+      <div class="card mb-3"
+        style="max-width: 400px;max-height:210px;display: inline-block;margin-left:40px;margin-top: 50px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="./assets/doctor.jpeg" class="img-fluid rounded-start" alt="..."
+              style="height: 210px;width:200px;align-items: center;">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Dr. Vaishali kurul</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+              <button type="button" class="btn btn-success btn-sm"
+                style="position: absolute;bottom: 5px;right:10px">Contact</button>
+
             </div>
           </div>
         </div>
-        <div class="card mb-3"
-          style="max-width: 400px;max-height:210px;display: inline-block;margin-left:40px;margin-top: 50px;">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img src="./assets/doctor.jpeg" class="img-fluid rounded-start" alt="..."
-                style="height: 210px;width:200px;align-items: center;">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Dr. Vaishali kurul</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.</p>
-                </p>
-                <button type="button" class="btn btn-success btn-sm"
-                  style="position: absolute;bottom: 5px;right:10px">Contact</button>
-
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card mb-3"
-          style="max-width: 400px;max-height:210px;display: inline-block;margin-left:40px;margin-top: 50px;">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img src="./assets/doctor.jpeg" class="img-fluid rounded-start" alt="..."
-                style="height: 210px;width:200px;align-items: center;">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Dr. Vaishali kurul</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.</p>
-                <button type="button" class="btn btn-success btn-sm"
-                  style="position: absolute;bottom: 5px;right:10px">Contact</button>
-
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card mb-3"
-          style="max-width: 400px;max-height:210px;display: inline-block;margin-left:40px;margin-top: 50px;">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img src="./assets/doctor.jpeg" class="img-fluid rounded-start" alt="..."
-                style="height: 210px;width:200px;align-items: center;">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Dr. Vaishali kurul</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.</p>
-                <button type="button" class="btn btn-success btn-sm"
-                  style="position: absolute;bottom: 5px;right:10px">Contact</button>
-
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card mb-3"
-          style="max-width: 400px;max-height:210px;display: inline-block;margin-left: 40px;margin-top: 50px;">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img src="./assets/doctor.jpeg" class="img-fluid rounded-start" alt="..."
-                style="height: 210px;width:200px;align-items: center;">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Dr. Vaishali kurul</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.</p>
-                <button type="button" class="btn btn-success btn-sm"
-                  style="position: absolute;bottom: 5px;right:10px">Contact</button>
-
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card mb-3"
-          style="max-width: 400px;max-height:210px;display: inline-block;margin-left:40px;margin-top: 50px;position: relative;">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img src="./assets/doctor.jpeg" class="img-fluid rounded-start" alt="..."
-                style="height: 210px;width:200px;align-items: center;">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Dr. Vaishali kurul</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.</p>
-                <button type="button" class="btn btn-success btn-sm"
-                  style="position: absolute;bottom: 5px;right:10px">Contact</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
       </div>
-    </section>
-  </section>
+      <div class="card mb-3"
+        style="max-width: 400px;max-height:210px;display: inline-block;margin-left:40px;margin-top: 50px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="./assets/doctor.jpeg" class="img-fluid rounded-start" alt="..."
+              style="height: 210px;width:200px;align-items: center;">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Dr. Vaishali kurul</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+              </p>
+              <button type="button" class="btn btn-success btn-sm"
+                style="position: absolute;bottom: 5px;right:10px">Contact</button>
 
-  <!-- Footer -->
-  <footer>
-    <div class="cointainer p-1 m-2">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3"
+        style="max-width: 400px;max-height:210px;display: inline-block;margin-left:40px;margin-top: 50px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="./assets/doctor.jpeg" class="img-fluid rounded-start" alt="..."
+              style="height: 210px;width:200px;align-items: center;">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Dr. Vaishali kurul</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+              <button type="button" class="btn btn-success btn-sm"
+                style="position: absolute;bottom: 5px;right:10px">Contact</button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3"
+        style="max-width: 400px;max-height:210px;display: inline-block;margin-left:40px;margin-top: 50px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="./assets/doctor.jpeg" class="img-fluid rounded-start" alt="..."
+              style="height: 210px;width:200px;align-items: center;">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Dr. Vaishali kurul</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+              <button type="button" class="btn btn-success btn-sm"
+                style="position: absolute;bottom: 5px;right:10px">Contact</button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3"
+        style="max-width: 400px;max-height:210px;display: inline-block;margin-left: 40px;margin-top: 50px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="./assets/doctor.jpeg" class="img-fluid rounded-start" alt="..."
+              style="height: 210px;width:200px;align-items: center;">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Dr. Vaishali kurul</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+              <button type="button" class="btn btn-success btn-sm"
+                style="position: absolute;bottom: 5px;right:10px">Contact</button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3"
+        style="max-width: 400px;max-height:210px;display: inline-block;margin-left:40px;margin-top: 50px;position: relative;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="./assets/doctor.jpeg" class="img-fluid rounded-start" alt="..."
+              style="height: 210px;width:200px;align-items: center;">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Dr. Vaishali kurul</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+              <button type="button" class="btn btn-success btn-sm"
+                style="position: absolute;bottom: 5px;right:10px">Contact</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+</section>
+
+<!-- Footer -->
+<footer class="bg-success text-white bg-opacity-75 bg-gradient">
+    <div class="container-fluid p-3 m-4 text-bg-primary">
       <div class="row">
         <div class="col-sm-6 aboutus">
-          <p>About Us</p>
+          <p class="h6"><u>About Us</u></p>
           <div class="about_info">
             JIJA Foundation is a non-profit NGO working towards fulfilling the the needs
             of people by providing them healthcare facilities and services <b>Learn more....</b>
           </div>
-          <div class="handles mt-3">
+          <div class="handles mt-5">
             <i class="fa-brands fa-facebook"></i>
             <i class="fa-brands fa-instagram"></i>
             <i class="fa-brands fa-linkedin"></i>
@@ -227,7 +256,7 @@
           </div>
         </div>
         <div class="col-sm-6 info">
-          <p>Information</p>
+          <p class="h6"><u>Information</u></p>
           <div class="location">
             <i class="fa-solid fa-location-dot "></i>
             <p>JIJA Foundation, 1099/A,<br> Model Colony, Pune - 411016.</p>
@@ -247,7 +276,5 @@
     </div>
   </footer>
 
-
 </body>
-
 </html>
