@@ -59,8 +59,8 @@
 <div class="container" style="background-color: rgb(94, 170, 246);border: black;" >
 <div class="dropdowndoctors" style="position: absolute;top: 50px;background-color: rgb(107, 176, 244); border: 3px solid black;border-radius: 10px;transform: translate(820px,120px);">
     
-<label for="specialtySelect" style="justify-content: center;text-align: center;margin: 10px;">Select Doctor:</label>
-<select id="specialtySelect" style="margin: 5px;border-radius: 5px;text-align: center;">
+<label for="specialtySelect" style="justify-content: center;text-align: center;margin: 10px;color: black;">Select Doctor:</label>
+<select id="specialtySelect" style="margin: 5px;border-radius: 5px;text-align: center;color: black;">
   <option value="">Select Doctor name</option>
   <option value="Dr. Aarav Kapoor">Dr. Aarav Kapoor</option>
   <option value="Dr. Diya Sharma">Dr. Diya Sharma</option>
@@ -79,7 +79,7 @@
   <option value="Dr. Armaan Malhotra">Dr. Armaan Malhotra</option>
 </select>
 
-<div id="doctorInfo"></div>
+<div id="doctorInfo" style="color: black;"></div>
 
 </div>
 </div>
@@ -117,19 +117,20 @@ $(document).ready(function(){
 });
 </script>
 <section class="card">
-    <div class="cards" style="display: inline-block;">
+    <div class="cards" style="display: inline-block; color: black;">
       <div class="card mb-3"
-        style="max-width: 400px;max-height:210px;display: inline-block;margin-left:40px;margin-top: 50px;">
+        style="max-width: 400px;max-height:180px;display: inline-block;margin-left:40px;margin-top: 50px;">
         <div class="row g-0">
           <div class="col-md-4">
-            <img src="./assets/doctor.jpeg" class="img-fluid rounded-start" alt="..."
-              style="height: 210px;width:200px;align-items: center;">
+            <img src="./assets/doctor4.jpeg" class="img-fluid rounded-start" alt="..."
+              style="height: 180px;width:200px;align-items: center;">
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title">Dr. Vaishali kurul</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                content. This content is a little bit longer.</p>
+              <h5 class="card-title">Dr. Arjun Singhania</h5>
+              <p class="card-text">
+                Specialty:Cardiology,
+                Location: Chennai Heart Center,Chennai 856 781</p>
               <button type="button" class="btn btn-success btn-sm"
                 style="position: absolute;bottom: 5px;right:10px">Contact</button>
 
@@ -138,17 +139,19 @@ $(document).ready(function(){
         </div>
       </div>
       <div class="card mb-3"
-        style="max-width: 400px;max-height:210px;display: inline-block;margin-left:40px;margin-top: 50px;">
+        style="max-width: 400px;max-height:180px;display: inline-block;margin-left:40px;margin-top: 50px;">
         <div class="row g-0">
           <div class="col-md-4">
-            <img src="./assets/doctor.jpeg" class="img-fluid rounded-start" alt="..."
-              style="height: 210px;width:200px;align-items: center;">
+            <img src="./assets/doctor1.jpeg" class="img-fluid rounded-start" alt="..."
+              style="height: 180px;width:200px;align-items: center;">
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title">Dr. Vaishali kurul</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                content. This content is a little bit longer.</p>
+              <h5 class="card-title">Dr. Diya Sharma</h5>
+              <p class="card-text">
+                Specialty:Pediatrics,
+                Location: Mumbai Kids Hospital,Mumbai 856 781
+              </p>
               </p>
               <button type="button" class="btn btn-success btn-sm"
                 style="position: absolute;bottom: 5px;right:10px">Contact</button>
@@ -158,17 +161,57 @@ $(document).ready(function(){
         </div>
       </div>
       <div class="card mb-3"
-        style="max-width: 400px;max-height:210px;display: inline-block;margin-left:40px;margin-top: 50px;">
+        style="max-width: 400px;max-height:180px;display: inline-block;margin-left:40px;margin-top: 50px;">
         <div class="row g-0">
           <div class="col-md-4">
-            <img src="./assets/doctor.jpeg" class="img-fluid rounded-start" alt="..."
-              style="height: 210px;width:200px;align-items: center;">
+            <img src="./assets/doctor5.jpeg" class="img-fluid rounded-start" alt="..."
+              style="height: 180px;width:200px;align-items: center;">
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title">Dr. Vaishali kurul</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                content. This content is a little bit longer.</p>
+              <h5 class="card-title">Dr. Aarav Kapoor</h5>
+              <p class="card-text">
+                Specialty: General Medicine,
+                Location: Delhi Health Clinic,Delhi 856 781
+                <button type="button" class="btn btn-success btn-sm"
+                style="position: absolute;bottom: 5px;right:10px">Contact</button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3"
+        style="max-width: 400px;max-height:180px;display: inline-block;margin-left:40px;margin-top: 50px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="./assets/doctor2.jpeg" class="img-fluid rounded-start" alt="..."
+              style="height: 180px;width:200px;align-items: center;">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Dr. Kavya Reddy</h5>
+              <p class="card-text">Specialty:Dermatology,
+                Location: Hyderabad Skin Clinic,Hyderabad 856 781</p>
+              <button type="button" class="btn btn-success btn-sm"
+                style="position: absolute;bottom: 5px;right:10px">Contact</button>
+               
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3"
+        style="max-width: 400px;max-height:180px;display: inline-block;margin-left: 40px;margin-top: 50px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="./assets/doctor6.jpeg" class="img-fluid rounded-start" alt="..."
+              style="height: 180px;width:200px;align-items: center;">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Dr. Rohit Verma</h5>
+              <p class="card-text">Specialty:Orthopedics,
+                Location: Bangalore OrthoCare,Bangalore 856 781</p>
               <button type="button" class="btn btn-success btn-sm"
                 style="position: absolute;bottom: 5px;right:10px">Contact</button>
 
@@ -177,62 +220,186 @@ $(document).ready(function(){
         </div>
       </div>
       <div class="card mb-3"
-        style="max-width: 400px;max-height:210px;display: inline-block;margin-left:40px;margin-top: 50px;">
+        style="max-width: 400px;max-height:180px;display: inline-block;margin-left:40px;margin-top: 50px;position: relative;">
         <div class="row g-0">
           <div class="col-md-4">
-            <img src="./assets/doctor.jpeg" class="img-fluid rounded-start" alt="..."
-              style="height: 210px;width:200px;align-items: center;">
+            <img src="./assets/doctor3.jpeg" class="img-fluid rounded-start" alt="..."
+              style="height: 180px;width:200px;align-items: center;">
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title">Dr. Vaishali kurul</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                content. This content is a little bit longer.</p>
+              <h5 class="card-title">Dr. Naina Gupta</h5>
+              <p class="card-text">Specialty:Ophthalmology,
+                Location: Kolkata Eye Clinic,Kolkata 856 781</p>
               <button type="button" class="btn btn-success btn-sm"
                 style="position: absolute;bottom: 5px;right:10px">Contact</button>
-
             </div>
           </div>
         </div>
       </div>
       <div class="card mb-3"
-        style="max-width: 400px;max-height:210px;display: inline-block;margin-left: 40px;margin-top: 50px;">
+        style="max-width: 400px;max-height:180px;display: inline-block;margin-left:40px;margin-top: 50px;position: relative;">
         <div class="row g-0">
           <div class="col-md-4">
-            <img src="./assets/doctor.jpeg" class="img-fluid rounded-start" alt="..."
-              style="height: 210px;width:200px;align-items: center;">
+            <img src="./assets/doctor4.jpeg" class="img-fluid rounded-start" alt="..."
+              style="height: 180px;width:200px;align-items: center;">
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title">Dr. Vaishali kurul</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                content. This content is a little bit longer.</p>
+              <h5 class="card-title">Dr. Vikram Pate</h5>
+              <p class="card-text">Specialty:Neurology
+                Location: Ahmedabad Neuro Center,Ahmedabad 856 781</p>
               <button type="button" class="btn btn-success btn-sm"
                 style="position: absolute;bottom: 5px;right:10px">Contact</button>
-
             </div>
           </div>
         </div>
       </div>
       <div class="card mb-3"
-        style="max-width: 400px;max-height:210px;display: inline-block;margin-left:40px;margin-top: 50px;position: relative;">
+        style="max-width: 400px;max-height:180px;display: inline-block;margin-left:40px;margin-top: 50px;position: relative;">
         <div class="row g-0">
           <div class="col-md-4">
-            <img src="./assets/doctor.jpeg" class="img-fluid rounded-start" alt="..."
-              style="height: 210px;width:200px;align-items: center;">
+            <img src="./assets/doctor1.jpeg" class="img-fluid rounded-start" alt="..."
+              style="height: 180px;width:200px;align-items: center;">
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title">Dr. Vaishali kurul</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                content. This content is a little bit longer.</p>
+              <h5 class="card-title">Dr. Ananya Mishra</h5>
+              <p class="card-text">Specialty:Gynecology,
+                Location: Pune Women's Health,Pune 856 781</p>
               <button type="button" class="btn btn-success btn-sm"
                 style="position: absolute;bottom: 5px;right:10px">Contact</button>
             </div>
           </div>
         </div>
       </div>
-
+      <div class="card mb-3"
+        style="max-width: 400px;max-height:180px;display: inline-block;margin-left:40px;margin-top: 50px;position: relative;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="./assets/doctor5.jpeg" class="img-fluid rounded-start" alt="..."
+              style="height: 180px;width:200px;align-items: center;">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Dr. Pranav Khurana</h5>
+              <p class="card-text">Specialty:ENT,
+                Location: Jaipur ENT Clinic,Jaipur 856 781</p>
+              <button type="button" class="btn btn-success btn-sm"
+                style="position: absolute;bottom: 5px;right:10px">Contact</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3"
+        style="max-width: 400px;max-height:180px;display: inline-block;margin-left:40px;margin-top: 50px;position: relative;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="./assets/doctor2.jpeg" class="img-fluid rounded-start" alt="..."
+              style="height: 180px;width:200px;align-items: center;">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Dr. Riya Thakur</h5>
+              <p class="card-text">Specialty:Psychiatry,
+                Location: Lucknow Mental Health,Lucknow 856 781</p>
+              <button type="button" class="btn btn-success btn-sm"
+                style="position: absolute;bottom: 5px;right:10px">Contact</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3"
+        style="max-width: 400px;max-height:180px;display: inline-block;margin-left:40px;margin-top: 50px;position: relative;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="./assets/doctor6.jpeg" class="img-fluid rounded-start" alt="..."
+              style="height: 180px;width:200px;align-items: center;">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Dr. Arnav Desai</h5>
+              <p class="card-text">Specialty:Dentistry,
+                Location: Bhopal Dental Care,      Bhopal 856 781</p>
+              <button type="button" class="btn btn-success btn-sm"
+                style="position: absolute;bottom: 5px;right:10px">Contact</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3"
+        style="max-width: 400px;max-height:180px;display: inline-block;margin-left:40px;margin-top: 50px;position: relative;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="./assets/doctor3.jpeg" class="img-fluid rounded-start" alt="..."
+              style="height: 180px;width:200px;align-items: center;">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Dr. Nandini Mehta</h5>
+              <p class="card-text">Specialty:Pulmonology,
+                Location: Indore Lung Clinic,856 781</p>
+              <button type="button" class="btn btn-success btn-sm"
+                style="position: absolute;bottom: 5px;right:10px">Contact</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3"
+        style="max-width: 400px;max-height:180px;display: inline-block;margin-left:40px;margin-top: 50px;position: relative;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="./assets/doctor4.jpeg" class="img-fluid rounded-start" alt="..."
+              style="height: 180px;width:200px;align-items: center;">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Dr. Yuvraj Singh</h5>
+              <p class="card-text">Specialty:Sports Medicine,
+                Location: Chandigarh Sports Clinic,Chandigarh 856 781</p>
+              <button type="button" class="btn btn-success btn-sm"
+                style="position: absolute;bottom: 5px;right:10px">Contact</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3"
+        style="max-width: 400px;max-height:180px;display: inline-block;margin-left:40px;margin-top: 50px;position: relative;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="./assets/doctor1.jpeg" class="img-fluid rounded-start" alt="..."
+              style="height: 180px;width:200px;align-items: center;">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Dr. Simran Kapoor</h5>
+              <p class="card-text">Specialty:Endocrinology,
+                Location: Surat Endocrine Center,Surat 856 781</p>
+              <button type="button" class="btn btn-success btn-sm"
+                style="position: absolute;bottom: 5px;right:10px">Contact</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3"
+        style="max-width: 400px;max-height:180px;display: inline-block;margin-left:40px;margin-top: 50px;position: relative;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="./assets/doctor5.jpeg" class="img-fluid rounded-start" alt="..."
+              style="height: 180px;width:200px;align-items: center;">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Dr. Armaan Malhotra</h5>
+              <p class="card-text">Specialty:Urology,
+                Location: Nagpur Urological Care,
+                Nagpur 856 781</p>
+              <button type="button" class="btn btn-success btn-sm"
+                style="position: absolute;bottom: 5px;right:10px">Contact</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
     </div>
   </section>
