@@ -5,7 +5,9 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css" />
 
@@ -242,62 +244,87 @@
     </nav>
     <!-- end navbar -->
 
-    <div class="container " style="padding: 20px;">
+    <div class="container" style="padding: 20px;">
       <div class="content">
         <div class="left-side">
           <div class="address details">
             <i class="fas fa-map-marker-alt"></i>
             <div class="topic">Address</div>
-            <div class="text-one">Jija Foundantion <address></address>
-            </div>
-            <div class="text-two">Pune</div>
+            <div class="text-one">Jija Foundation</div>
+            <div class="text-two">Kalyani Nagar, Satara</div>
           </div>
           <div class="phone details">
             <i class="fas fa-phone-alt"></i>
             <div class="topic">Phone</div>
-            <div class="text-one">+910000000000</div>
-            <div class="text-two">+910000000000</div>
+            <div class="text-one">+91 20 2567 1090</div>
+            <div class="text-two">+91 20 2567 1091</div>
           </div>
           <div class="email details">
             <i class="fas fa-envelope"></i>
             <div class="topic">Email</div>
-            <div class="text-one">abc@gmail.com</div>
-            <div class="text-two">abc@gmail.com</div>
+            <div class="text-one">info@jijafoundation.org</div>
+            <div class="text-two">contact@jijafoundation.org</div>
           </div>
           <div class="gps">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7602.361845238196!2d74.00720855869137!3d17.68891136716387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc239e929c3ea1b%3A0x257d6136eedd4b3a!2sSatara%20Hospital%20%26%20Research%20Center%20Private%20Limited!5e0!3m2!1sen!2sin!4v1710679743970!5m2!1sen!2sin"
-              width="auto" height="250px" style="border:0;" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7602.361845238196!2d74.00720855869137!3d17.68891136716387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc239e929c3ea1b%3A0x257d6136eedd4b3a!2sSatara%20Hospital%20%26%20Research%20Center%20Private%20Limited!5e0!3m2!1sen!2sin!4v1710679743970!5m2!1sen!2sin"
+              width="auto" height="250px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
         <div class="right-side">
           <div class="topic-text">
             <h2>Send us a message</h2>
           </div>
-          <p>You can freely send your enqueries to us and our team will contact you</p>
-          <form action="#">
+          <p>You can freely send your inquiries to us and our team will contact you.</p>
+          <form id="contactForm">
             <div class="input-box">
-              <input type="text" placeholder="Enter your name">
+              <input type="text" placeholder="Enter your name" id="name" name="name">
             </div>
             <div class="input-box">
-              <input type="text" placeholder="Enter your contact">
+              <input type="text" placeholder="Enter your contact" id="contact" name="contact">
             </div>
             <div class="input-box">
-              <input type="text" placeholder="Enter your email">
+              <input type="text" placeholder="Enter your email" id="email" name="email">
             </div>
             <div class="input-box message-box">
-              <input type="text" placeholder="Enter your message">
+              <input type="text" placeholder="Enter your message" id="message" name="message">
             </div>
             <div class="button">
-              <input type="button" value="Send Now">
+              <button type="button" onclick="submitForm()">Send Now</button>
             </div>
           </form>
+          
         </div>
       </div>
-
     </div>
+    <script type="text/javascript">
+      emailjs.init('5XlxaRCIfvwxmiPrZ')
+    </script>
+    <script>
+      function submitForm() {
+  // Get form values
+  var name = document.getElementById("name").value;
+  var contact = document.getElementById("contact").value;
+  var email = document.getElementById("email").value;
+  var message = document.getElementById("message").value;
 
+  // Send email using EmailJS
+  emailjs.send("service_obfqzoc", "template_x71nu74", {
+    name: name,
+    contact: contact,
+    email: email,
+    message: message
+  })
+  .then(function(response) {
+    alert("Your query has been registered. We will get back to you soon.");
+    // Reset the form
+    document.getElementById("contactForm").reset();
+  }, function(error) {
+    alert("Error occurred while submitting the form."+error);
+    console.error("EmailJS error:", error);
+  });
+}
+
+      </script>
 
     <!-- Footer -->
     <footer class="bg-success text-white bg-gradient">
@@ -320,7 +347,7 @@
             <p class="h6"><u>Information</u></p>
             <div class="location">
               <i class="fa-solid fa-location-dot "></i>
-              <p>JIJA Foundation, 1099/A,<br> Model Colony, Pune - 411016.</p>
+              <p>JIJA Foundation, 1099/A,<br> Kalyani Nagar, Satara - 411016.</p>
             </div>
             <div class="contact">
               <i class="fa-solid fa-phone"></i>
