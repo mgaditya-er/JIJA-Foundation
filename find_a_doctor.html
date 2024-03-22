@@ -35,7 +35,7 @@
 
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-gl shadow bg-white p-0">
+  <nav class="navbar navbar-expand-lg shadow bg-white p-0">
     <div class="container-fluid shadow-sm ps-4">
       <a class="navbar-brand" href="#homepage">
         <span><img src="./assets/jija logo.png" alt="logo"></span>
@@ -54,7 +54,7 @@
           <a class="nav-link" href="contact.html" target="_self">Contact</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="reserach">Research</a>
+          <a class="nav-link" href="research">Research</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="services.html" target="_self">Services & Clinics</a>
@@ -66,18 +66,14 @@
     </div>
   </nav>
 
-  <div style="height: 690px; width: 100vw;">
-    <img src="./assets/doctor.jpeg" style="position: relative; width: 100%; object-fit:cover;">
-  </div>
-
   <!-- Dropdown element -->
-  <div class="container" style="background-color: rgb(94, 170, 246);border: black;">
+  <div class="container main-content">
+    <!-- Dropdown element -->
     <div class="dropdowndoctors"
-      style="position: absolute;top: 50px;background-color: rgb(107, 176, 244); border: 3px solid black;border-radius: 10px;transform: translate(1000px,180px);">
+      style="background-color: rgb(49, 209, 105); border: 3px solid rgb(204, 204, 204); border-radius: 10px; margin-top: 20px; margin-bottom: 20px; width: 50%;">
 
-      <label for="specialtySelect" style="justify-content: center;text-align: center;margin: 10px;">Select
-        Doctor:</label>
-      <select id="specialtySelect" style="margin: 5px;border-radius: 5px;text-align: center;">
+      <label for="specialtySelect" style="text-align: center; margin: 10px;">Select Doctor:</label>
+      <select id="specialtySelect" style="margin: 5px; border-radius: 5px; text-align: center;">
         <option value="">Select Doctor name</option>
         <option value="Dr. Aarav Kapoor">Dr. Aarav Kapoor</option>
         <option value="Dr. Diya Sharma">Dr. Diya Sharma</option>
@@ -101,7 +97,7 @@
     </div>
   </div>
 
-  <!-- javascript -->
+  <!-- JavaScript -->
   <script>
     $(document).ready(function () {
       // Load JSON file
@@ -114,12 +110,12 @@
               return doctor.name === selectedSpecialty;
             });
             if (doctors.length > 0) {
-              var doctorInfoHtml = "<h2>" + selectedSpecialty + "</h2>";
+              var doctorInfoHtml = "<h2>   " + selectedSpecialty + "</h2>";
               doctorInfoHtml += "<ul>";
               doctors.forEach(function (doctor) {
                 doctorInfoHtml += "<li><strong>Name:</strong> " + doctor.name + "<br>";
                 doctorInfoHtml += "<strong>Location:</strong> " + doctor.location + "<br>";
-                doctorInfoHtml += "<strong>Specialtity:</strong> " + doctor.specialty + "<br>";
+                doctorInfoHtml += "<strong>Specialty:</strong> " + doctor.specialty + "<br>";
                 doctorInfoHtml += "<strong>Contact:</strong> " + doctor.contact + "</li>";
               });
               doctorInfoHtml += "</ul>";
@@ -135,311 +131,6 @@
     });
   </script>
 
-
-  <!-- Cards section -->
-  <section class="card p-5">
-    <div class="cards" style="display: inline-block;">
-
-      <div class="card mb-3"
-        style="max-width: 400px;max-height:180px;display: inline-block;margin-left:40px;margin-top: 50px;">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="./assets/doctor4.jpeg" class="img-fluid rounded-start" alt="..."
-              style="height: 180px;width:200px;align-items: center;">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Dr. Arjun Singhania</h5>
-              <p class="card-text">
-                Specialty:Cardiology,
-                Location: Chennai Heart Center,Chennai 856 781</p>
-              <button type="button" class="btn btn-success btn-sm"
-                style="position: absolute;bottom: 5px;right:10px">Contact</button>
-
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card mb-3"
-        style="max-width: 400px;max-height:180px;display: inline-block;margin-left:40px;margin-top: 50px;">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="./assets/doctor1.jpg" class="img-fluid rounded-start" alt="..."
-              style="height: 180px;width:200px;align-items: center; object-fit: cover;">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Dr. Diya Sharma</h5>
-              <p class="card-text">
-                Specialty:Pediatrics,
-                Location: Mumbai Kids Hospital,Mumbai 856 781
-              </p>
-              </p>
-              <button type="button" class="btn btn-success btn-sm"
-                style="position: absolute;bottom: 5px;right:10px">Contact</button>
-
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card mb-3"
-        style="max-width: 400px;max-height:180px;display: inline-block;margin-left:40px;margin-top: 50px;">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="./assets/doctor5.jpg" class="img-fluid rounded-start" alt="..."
-              style="height: 180px;width:200px;align-items: center; object-fit: cover;">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Dr. Aarav Kapoor</h5>
-              <p class="card-text">
-                Specialty: General Medicine,
-                Location: Delhi Health Clinic,Delhi 856 781
-                <button type="button" class="btn btn-success btn-sm"
-                  style="position: absolute;bottom: 5px;right:10px">Contact</button>
-
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card mb-3"
-        style="max-width: 400px;max-height:180px;display: inline-block;margin-left:40px;margin-top: 50px;">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="./assets/doctor2.jpg" class="img-fluid rounded-start" alt="..."
-              style="height: 180px;width:200px;align-items: center; object-fit: cover;">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Dr. Kavya Reddy</h5>
-              <p class="card-text">Specialty:Dermatology,
-                Location: Hyderabad Skin Clinic,Hyderabad 856 781</p>
-              <button type="button" class="btn btn-success btn-sm"
-                style="position: absolute;bottom: 5px;right:10px">Contact</button>
-
-
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card mb-3"
-        style="max-width: 400px;max-height:180px;display: inline-block;margin-left: 40px;margin-top: 50px;">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="./assets/doctor6.jpg" class="img-fluid rounded-start" alt="..."
-              style="height: 180px;width:200px;align-items: center; object-fit: cover;">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Dr. Rohit Verma</h5>
-              <p class="card-text">Specialty:Orthopedics,
-                Location: Bangalore OrthoCare,Bangalore 856 781</p>
-              <button type="button" class="btn btn-success btn-sm"
-                style="position: absolute;bottom: 5px;right:10px">Contact</button>
-
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card mb-3"
-        style="max-width: 400px;max-height:180px;display: inline-block;margin-left:40px;margin-top: 50px;position: relative;">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="./assets/doctor3.jpg" class="img-fluid rounded-start" alt="..."
-              style="height: 180px;width:200px;align-items: center; object-fit: cover;">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Dr. Naina Gupta</h5>
-              <p class="card-text">Specialty:Ophthalmology,
-                Location: Kolkata Eye Clinic,Kolkata 856 781</p>
-              <button type="button" class="btn btn-success btn-sm"
-                style="position: absolute;bottom: 5px;right:10px">Contact</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card mb-3"
-        style="max-width: 400px;max-height:180px;display: inline-block;margin-left:40px;margin-top: 50px;position: relative;">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="./assets/doctor4.jpg" class="img-fluid rounded-start" alt="..."
-              style="height: 180px;width:200px;align-items: center; object-fit: cover;">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Dr. Vikram Pate</h5>
-              <p class="card-text">Specialty:Neurology
-                Location: Ahmedabad Neuro Center,Ahmedabad 856 781</p>
-              <button type="button" class="btn btn-success btn-sm"
-                style="position: absolute;bottom: 5px;right:10px">Contact</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card mb-3"
-        style="max-width: 400px;max-height:180px;display: inline-block;margin-left:40px;margin-top: 50px;position: relative;">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="./assets/doctor1.jpg" class="img-fluid rounded-start" alt="..."
-              style="height: 180px;width:200px;align-items: center; object-fit: cover;">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Dr. Ananya Mishra</h5>
-              <p class="card-text">Specialty:Gynecology,
-                Location: Pune Women's Health,Pune 856 781</p>
-              <button type="button" class="btn btn-success btn-sm"
-                style="position: absolute;bottom: 5px;right:10px">Contact</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card mb-3"
-        style="max-width: 400px;max-height:180px;display: inline-block;margin-left:40px;margin-top: 50px;position: relative;">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="./assets/doctor5.jpg" class="img-fluid rounded-start" alt="..."
-              style="height: 180px;width:200px;align-items: center; object-fit: cover;">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Dr. Pranav Khurana</h5>
-              <p class="card-text">Specialty:ENT,
-                Location: Jaipur ENT Clinic,Jaipur 856 781</p>
-              <button type="button" class="btn btn-success btn-sm"
-                style="position: absolute;bottom: 5px;right:10px">Contact</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card mb-3"
-        style="max-width: 400px;max-height:180px;display: inline-block;margin-left:40px;margin-top: 50px;position: relative;">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="./assets/doctor2.jpg" class="img-fluid rounded-start" alt="..."
-              style="height: 180px;width:200px;align-items: center; object-fit: cover;">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Dr. Riya Thakur</h5>
-              <p class="card-text">Specialty:Psychiatry,
-                Location: Lucknow Mental Health,Lucknow 856 781</p>
-              <button type="button" class="btn btn-success btn-sm"
-                style="position: absolute;bottom: 5px;right:10px">Contact</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card mb-3"
-        style="max-width: 400px;max-height:180px;display: inline-block;margin-left:40px;margin-top: 50px;position: relative;">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="./assets/doctor6.jpg" class="img-fluid rounded-start" alt="..."
-              style="height: 180px;width:200px;align-items: center; object-fit: cover;">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Dr. Arnav Desai</h5>
-              <p class="card-text">Specialty:Dentistry,
-                Location: Bhopal Dental Care, Bhopal 856 781</p>
-              <button type="button" class="btn btn-success btn-sm"
-                style="position: absolute;bottom: 5px;right:10px">Contact</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card mb-3"
-        style="max-width: 400px;max-height:180px;display: inline-block;margin-left:40px;margin-top: 50px;position: relative;">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="./assets/doctor3.jpg" class="img-fluid rounded-start" alt="..."
-              style="height: 180px;width:200px;align-items: center; object-fit: cover;">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Dr. Nandini Mehta</h5>
-              <p class="card-text">Specialty:Pulmonology,
-                Location: Indore Lung Clinic,856 781</p>
-              <button type="button" class="btn btn-success btn-sm"
-                style="position: absolute;bottom: 5px;right:10px">Contact</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card mb-3"
-        style="max-width: 400px;max-height:180px;display: inline-block;margin-left:40px;margin-top: 50px;position: relative;">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="./assets/doctor4.jpg" class="img-fluid rounded-start" alt="..."
-              style="height: 180px;width:200px;align-items: center; object-fit: cover;">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Dr. Yuvraj Singh</h5>
-              <p class="card-text">Specialty:Sports Medicine,
-                Location: Chandigarh Sports Clinic,Chandigarh 856 781</p>
-              <button type="button" class="btn btn-success btn-sm"
-                style="position: absolute;bottom: 5px;right:10px">Contact</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card mb-3"
-        style="max-width: 400px;max-height:180px;display: inline-block;margin-left:40px;margin-top: 50px;position: relative;">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="./assets/doctor1.jpg" class="img-fluid rounded-start" alt="..."
-              style="height: 180px;width:200px;align-items: center; object-fit: cover;">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Dr. Simran Kapoor</h5>
-              <p class="card-text">Specialty:Endocrinology,
-                Location: Surat Endocrine Center,Surat 856 781</p>
-              <button type="button" class="btn btn-success btn-sm"
-                style="position: absolute;bottom: 5px;right:10px">Contact</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card mb-3"
-        style="max-width: 400px;max-height:180px;display: inline-block;margin-left:40px;margin-top: 50px;position: relative;">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="./assets/doctor5.jpg" class="img-fluid rounded-start" alt="..."
-              style="height: 180px;width:200px;align-items: center; object-fit: cover;">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Dr. Armaan Malhotra</h5>
-              <p class="card-text">Specialty:Urology,
-                Location: Nagpur Urological Care,
-                Nagpur 856 781</p>
-              <button type="button" class="btn btn-success btn-sm"
-                style="position: absolute;bottom: 5px;right:10px">Contact</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
   <!-- Footer -->
   <footer class="bg-success text-white bg-gradient">
     <div class="container p-3 m-4">
@@ -447,28 +138,28 @@
         <div class="col-sm-6 aboutus">
           <p class="h6"><u>About Us</u></p>
           <div class="about_info">
-            JIJA Foundation is a non-profit NGO working towards fulfilling the the needs
-            of people by providing them healthcare facilities and services <b>Learn more....</b>
+            JIJA Foundation is a non-profit NGO working towards fulfilling the needs
+            of people by providing them healthcare facilities and services. <b>Learn more....</b>
           </div>
           <div class="handles mt-5">
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-linkedin"></i>
-            <i class="fa-brands fa-twitter"></i>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-linkedin"></i>
+            <i class="fab fa-twitter"></i>
           </div>
         </div>
         <div class="col-sm-6 info">
           <p class="h6"><u>Information</u></p>
           <div class="location">
-            <i class="fa-solid fa-location-dot "></i>
-            <p>JIJA Foundation, 1099/A,<br> Model Colony, Pune - 411016.</p>
+            <i class="fas fa-location-dot"></i>
+            <p>JIJA Foundation, 1099/A, Model Colony, Pune - 411016.</p>
           </div>
           <div class="contact">
-            <i class="fa-solid fa-phone"></i>
-            <p>(020)25671090/91</p>
+            <i class="fas fa-phone"></i>
+            <p>(020) 25671090/91</p>
           </div>
           <div class="email">
-            <i class="fa-regular fa-envelope"></i>
+            <i class="far fa-envelope"></i>
             <p>admin@jijafoundation.org</p>
           </div>
 
