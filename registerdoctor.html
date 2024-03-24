@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor Finder</title>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <!-- Fontawesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  <style>
+   
+/* Content Section */
+.container {
+  margin-top: 4rem;
+}
+
+.container .card {
+  width: auto;
+  height: auto;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.container .card h2 {
+  margin-bottom: 10px;
+}
+
+.container .card .form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.container .card .form input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #dddddd;
+  color: #a0a6a3;
+  font-family: "Roboto Mono", sans-serif;
+  box-shadow: 1px 5px 9px rgba(211, 211, 211, 0.7);
+}
+
+.container .card .form input.email {
+  margin-bottom: 15px;
+}
+
+.container .card .form input.pass {
+  margin-bottom: 5px;
+}
+
+
+
+
+
+
+
+
+.container .card .login_btn {
+  font-size: 20px;
+  color: white;
+  border-radius: 15px;
+  border: none;
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background: linear-gradient(-90deg, rgba(49, 209, 105, 1), rgba(38, 166, 91, 1));
+  box-shadow: 1px 5px 9px rgba(211, 211, 211, 0.9);
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+.container .card .login_btn:hover {
+  background: linear-gradient(-90deg, rgba(38, 166, 91, 1), rgba(49, 209, 105, 1));
+}
+
+
+.container .col-lg-6 h2 {
+  color: #fff;
+}
+
+.container .col-lg-6 p {
+  color: #fff;
+}
+
+/* Adjustments for register text */
+.login_register {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.login_register span {
+    color: #888;
+    font-size: 14px;
+}
+
+.login_register a {
+    color: #003A74;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.login_register a:hover {
+    text-decoration: underline;
+}
+
+    
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg shadow bg-white p-0">
+    <div class="container-fluid shadow-sm ps-4">
+      <a class="navbar-brand" href="#homepage">
+        <span><img src="./assets/jija logo.png" alt="logo"></span>
+        <span>JIJA Foundation</span>
+      </a>
+    </div>
+    <div class="navbar">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="aboutus">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html" target="_self">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="research">Research</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="services.html" target="_self">Services & Clinics</a>
+        </li>
+        <li>
+          <a href="find_a_doctor.html" class="btn btn-find" target="_self">Find a doctor</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Content Section -->
+  <div class="container mt-4">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+            <div class="card">
+                <h2>Login</h2>
+                <form class="form" id="loginForm">
+                    <input type="text" placeholder="Admin Username" class="email" id="username" required>
+                    <input type="password" placeholder="Admin password" class="pass" id="password" required>
+                    <button type="button" class="login_btn" onclick="login()">Login</button>
+                </form>
+                <div class="login_register">
+                    <span class="register">Don't have an account? <a href="#">Create one</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<iframe id="doctorIframe" src="doctor_form.html" style="display: none;"></iframe>
+
+<script>
+     function login() {
+      // Get username and password entered by the user
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+      // Read users.json file using fetch API
+      fetch("users.json")
+        .then(response => response.json())
+        .then(data => {
+          // Check if username and password match any user in the JSON data
+          var user = data.find(user => user.username === username && user.password === password);
+          if (user) {
+            // If user exists, show success alert
+            alert("Login successful!");
+            // var popupWindow = window.open("", "_blank", "width=600,height=400");
+
+            // popupWindow.document.write('<iframe src="doctor_form.html" width="100%" height="100%" frameborder="0"></iframe>');
+            window.location.href = "doctor_form.html";
+
+          } else {
+            // If user doesn't exist or credentials are incorrect, show error alert
+            alert("Invalid username or password.");
+          }
+        })
+        .catch(error => {
+          console.error("Error reading users.json:", error);
+          alert("An error occurred. Please try again later.");
+        });
+    }
+
+    setTimeout(loginSuccess, 2000); // Change to actual login success trigger
+
+</script>
+
+
+  
+
+</body>
+
+</html>

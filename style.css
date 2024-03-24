@@ -41,6 +41,8 @@ a:hover {
     color: #fff;
     border-color: rgb(49, 209, 105);
     font-weight: 500;
+    transition: all 0.4s;
+    margin-right: 1rem;
 }
 .btn-find:hover {
     background-color: rgb(51, 227, 112);

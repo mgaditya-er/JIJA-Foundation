@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor Form</title>
+</head>
+<body>
+  <h2>Doctor Information</h2>
+  <form id="doctorForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required><br>
+    <label for="specialty">Specialty:</label>
+    <input type="text" id="specialty" required><br>
+    <label for="location">Location:</label>
+    <input type="text" id="location" required><br>
+    <label for="contact">Contact:</label>
+    <input type="text" id="contact" required><br>
+    <button type="button" id="saveBtn">Save</button>
+  </form>
+
+  <script>
+    document.getElementById("saveBtn").addEventListener("click", function() {
+      // Get form inputs
+      var name = document.getElementById("name").value;
+      var specialty = document.getElementById("specialty").value;
+      var location = document.getElementById("location").value;
+      var contact = document.getElementById("contact").value;
+
+      // Create a doctor object
+      var doctor = {
+        name: name,
+        specialty: specialty,
+        location: location,
+        contact: contact
+      };
+
+      // Convert the doctor object to JSON string
+      var doctorJSON = JSON.stringify(doctor);
+
+      // Save the doctor data to local storage
+      localStorage.setItem("doctor", doctorJSON);
+
+      // Close the popup window
+      window.close();
+    });
+  </script>
+</body>
+</html>
