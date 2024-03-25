@@ -23,6 +23,37 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 
   <title>JIJA Foundation</title>
+  <style>
+    .section {
+      padding: 50px 0;
+      text-align: center;
+    }
+    .section h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+    .section p {
+      font-size: 16px;
+      color: #666;
+    }
+    .section .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .section .row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .section img {
+      width: 300px;
+      height: 200px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 
 <body>
@@ -46,7 +77,7 @@
           <a class="nav-link" href="contact.html" target="_self">Contact</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Research</a>
+          <a class="nav-link" href="research.html">Research</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="services.html" target="_self">Services & Clinics</a>
@@ -115,15 +146,87 @@
     </button>
   </div>
 
-  <!-- Sub Menu -->
-  <div class="cointainer submenu mt-5 d-flex justify-content-center">
+  <div class="container submenu mt-5 d-flex justify-content-center">
     <div class="submenu-options row d-flex justify-content-evenly flex-wrap">
-      <button class="btn btn-primary col-md-3 m-2">Patients and families</button>
-      <button class="btn btn-primary col-md-3 m-2">About Foundation</button>
-      <button class="btn btn-primary col-md-3 m-2">For Staff</button>
-      <button class="btn btn-primary col-md-3 m-2">Patient Portal</button>
+      <button class="btn btn-primary col-md-3 m-2" onclick="scrollToSection('patients')">Patients and families</button>
+      <button class="btn btn-primary col-md-3 m-2" onclick="scrollToSection('about')">About Foundation</button>
+      <button class="btn btn-primary col-md-3 m-2" onclick="scrollToSection('staff')">For Staff</button>
+      <button class="btn btn-primary col-md-3 m-2" onclick="scrollToSection('portal')">Patient Portal</button>
     </div>
   </div>
+  <script>
+    function scrollToSection(sectionId) {
+  var section = document.getElementById(sectionId);
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+  </script>
+
+
+<!-- Sections -->
+<!-- Sections -->
+<div id="patients" class="section">
+  <div class="container">
+    <h2>Patients and Families</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <img src="./assets/patient1.jpg" class="img-fluid rounded" alt="Patients Image" style="width: 300px; height: 200px;">
+      </div>
+      <div class="col-md-6">
+        <p>Welcome to Jija Health Care! We prioritize the well-being and care of our patients and their families.</p>
+        <!-- Add more content specific to Patients and Families section -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="about" class="section bg-light">
+  <div class="container">
+    <h2>About Foundation</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <p>Jija Foundation is dedicated to providing quality healthcare services to all individuals, regardless of their background or financial status.</p>
+        <!-- Add more content specific to About Foundation section -->
+      </div>
+      <div class="col-md-6">
+        <img src="./assets/patient2.jpg" class="img-fluid" alt="Foundation Image">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add similar styling and content for the remaining sections (For Staff and Patient Portal) -->
+
+
+<div id="staff" class="section">
+  <div class="container">
+    <h2>For Staff</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <img src="./assets/doctor2.jpg" class="img-fluid rounded" alt="Patients Image" style="width: 300px; height: 200px;">
+      </div>
+      <div class="col-md-6">
+        <p>Welcome to Jija Health Care! Our dedicated staff members are highly trained and committed to providing compassionate care to our patients.</p>
+        <!-- Add more content specific to Patients and Families section -->
+      </div>
+    </div
+</div>
+
+<div id="portal" class="section">
+  <div class="container">
+    <h2>Patient Portal</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <p>Welcome to the Patient Portal! Access your medical records, schedule appointments, and communicate with your healthcare team.</p>
+        <!-- Add more content specific to About Foundation section -->
+      </div>
+      <div class="col-md-6">
+        <img src="./assets/doctor1.jpeg" class="img-fluid" alt="Foundation Image">
+      </div>
+    </div>
+  </div>
+</div>
 
   <!-- Testimonial -->
   <section class="testimonials mb-5 p-4" style="background-color: rgb(239, 239, 203);">
