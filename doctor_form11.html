@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor Form</title>
+</head>
+<body>
+  <h2>Doctor Information</h2>
+  <form id="doctorForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required><br>
+    <label for="specialty">Specialty:</label>
+    <input type="text" id="specialty" required><br>
+    <label for="location">Location:</label>
+    <input type="text" id="location" required><br>
+    <label for="contact">Contact:</label>
+    <input type="text" id="contact" required><br>
+    <button type="button" id="saveBtn">Save</button>
+  </form>
+
+  <script>
+    // MySQL connection logic
+    const mysql = require('mysql2');
+
+    // Create a connection to the MySQL server
+    const connection = mysql.createConnection({
+      host: 'localhost',
+      user: 'root',
+      password: 'root',
+      database: 'jija'
+    });
+
+    // Connect to the MySQL server
+    connection.connect((err) => {
+      if (err) {
+        console.error('Error connecting to MySQL database:', err);
+        return;
+      }
+
+      console.log('Connected to MySQL database');
+    });
+
+    // Function to save doctor data to MySQL
+    const saveDoctorData = (doctor) => {
+      // Insert the doctor data into the database
+      const sql = 'INSERT INTO doctors (name, specialty, location, contact) VALUES (?, ?, ?, ?)';
+      const values = [doctor.name, doctor.specialty, doctor.location, doctor.contact];
+
+      connection.query(sql, values, (err, result) => {
+        if (err) {
+          alert('Error saving doctor data:', err);
+          return;
+        }
+        alert('Doctor data saved successfully:', result);
+      });
+    };
+
+    // Event listener for form submission
+    document.getElementById("saveBtn").addEventListener("click", function() {
+      // Get form inputs
+      var name = document.getElementById("name").value;
+      var specialty = document.getElementById("specialty").value;
+      var location = document.getElementById("location").value;
+      var contact = document.getElementById("contact").value;
+
+      // Create a doctor object
+      var doctor = {
+        name: name,
+        specialty: specialty,
+        location: location,
+        contact: contact
+      };
+
+      // Call the function to save doctor data
+      saveDoctorData(doctor);
+    });
+
+    // Close the MySQL connection after saving data (optional)
+    connection.end();
+  </script>
+</body>
+</html>

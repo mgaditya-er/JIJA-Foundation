@@ -1,59 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Doctor Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Form</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Fontawesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Google Fonts Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #c8e8e9;
+        }
+
+        .btn-primary {
+            color: #c8e8e9;
+            background-color: #03763e;
+            border-color: #03763e;
+        }
+
+        .btn-primary:hover {
+            color: #03763e;
+            background-color: #c8e8e9;
+            border-color: #c8e8e9;
+        }
+       
+    </style>
 </head>
 <body>
-  <h2>Doctor Information</h2>
-  <form id="doctorForm">
-    <label for="name">Name:</label>
-    <input type="text" id="name" required><br>
-    <label for="specialty">Specialty:</label>
-    <input type="text" id="specialty" required><br>
-    <label for="location">Location:</label>
-    <input type="text" id="location" required><br>
-    <label for="contact">Contact:</label>
-    <input type="text" id="contact" required><br>
-    <button type="button" id="saveBtn">Save</button>
-  </form>
+    <nav class="navbar navbar-expand-gl shadow bg-white p-0">
+        <div class="container-fluid shadow-sm ps-4">
+          <a class="navbar-brand" href="#homepage">
+            <span><img src="./assets/jija logo.png" alt="logo"></span>
+            <span>JIJA Foundation</span>
+          </a>
+        </div>
+        <div class="navbar">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aboutus.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html" target="_self">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="research.html">Research</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html" target="_self">Services & Clinics</a>
+            </li>
+            <li>
+              <a href="find_a_doctor.html" class="btn btn-find" target="_self">Find a doctor</a>
+            </li>
+            <li>
+              <a href="registerdoctor.html" class="btn btn-find" target="_self">Registration for Doctor</a>
+            </li>
+            <li>
+              <a href="patientregistration.html" class="btn btn-find" target="_self">Registration for Patient</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+  <div class="container">
+    <br>
+    <h2>Doctor Information</h2>
+    <form id="doctorForm">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" required>
+      </div>
+      <div class="form-group">
+        <label for="specialty">Specialty:</label>
+        <input type="text" class="form-control" id="specialty" required>
+      </div>
+      <div class="form-group">
+        <label for="location">Location:</label>
+        <input type="text" class="form-control" id="location" required>
+      </div>
+      <div class="form-group">
+        <label for="contact">Contact:</label>
+        <input type="text" class="form-control" id="contact" required>
+      </div>
+      <button type="button" class="btn btn-primary" id="saveBtn">Save</button>
+    </form>
+  </div>
+  <br>
+<!-- Footer -->
+<footer class="bg-success text-white bg-gradient">
+    <div class="container p-3 m-4">
+      <div class="row">
+        <div class="col-sm-6 aboutus">
+          <p class="h6"><u>About Us</u></p>
+          <div class="about_info">
+            JIJA Foundation is a non-profit NGO working towards fulfilling the the needs
+            of people by providing them healthcare facilities and services <b>Learn more....</b>
+          </div>
+          <div class="handles mt-5">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-twitter"></i>
+          </div>
+        </div>
+        <div class="col-sm-6 info">
+          <p class="h6"><u>Information</u></p>
+          <div class="location">
+            <i class="fa-solid fa-location-dot "></i>
+            <p>JIJA Foundation, 1099/A,<br> Kalyani Nagar, Satara - 411016.</p>
+          </div>
+          <div class="contact">
+            <i class="fa-solid fa-phone"></i>
+            <p>(020)25671090/91</p>
+          </div>
+          <div class="email">
+            <i class="fa-regular fa-envelope"></i>
+            <p>admin@jijafoundation.org</p>
+          </div>
 
+        </div>
+      </div>
+    </div>
+  </footer>
   <script>
-    // MySQL connection logic
-    const mysql = require('mysql2');
-
-    // Create a connection to the MySQL server
-    const connection = mysql.createConnection({
-      host: 'localhost',
-      user: 'root',
-      password: 'root',
-      database: 'jija'
-    });
-
-    // Connect to the MySQL server
-    connection.connect((err) => {
-      if (err) {
-        console.error('Error connecting to MySQL database:', err);
-        return;
-      }
-
-      console.log('Connected to MySQL database');
-    });
-
-    // Function to save doctor data to MySQL
+    // Function to save doctor data to MySQL (Assuming MySQL connection logic is handled elsewhere)
     const saveDoctorData = (doctor) => {
       // Insert the doctor data into the database
       const sql = 'INSERT INTO doctors (name, specialty, location, contact) VALUES (?, ?, ?, ?)';
       const values = [doctor.name, doctor.specialty, doctor.location, doctor.contact];
 
-      connection.query(sql, values, (err, result) => {
-        if (err) {
-          alert('Error saving doctor data:', err);
-          return;
-        }
-        alert('Doctor data saved successfully:', result);
-      });
+      // Assume MySQL connection logic here
+      console.log('Saving doctor data:', values);
     };
 
     // Event listener for form submission
@@ -75,9 +167,6 @@
       // Call the function to save doctor data
       saveDoctorData(doctor);
     });
-
-    // Close the MySQL connection after saving data (optional)
-    connection.end();
   </script>
 </body>
 </html>

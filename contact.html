@@ -195,6 +195,28 @@
         margin-left: 0;
       }
     }
+  .button button[type="button"] {
+    color: #fff;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    background: #04bd64;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* Add padding to make the button wider */
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  /* Change background color on hover */
+  .button button[type="button"]:hover {
+    background: #03763e;
+  }
+
+
+
   </style>
   <meta charset="UTF-8">
   <title> Responsive Contact Us Form | CodingLab </title>
@@ -233,7 +255,10 @@
           <a href="find_a_doctor.html" class="btn btn-find" target="_self">Find a doctor</a>
         </li>
         <li>
-          <a href="registerdoctor.html" class="btn btn-find" target="_self">Register</a>
+          <a href="registerdoctor.html" class="btn btn-find" target="_self">Registration for Doctor</a>
+        </li>
+        <li>
+          <a href="patientregistration.html" class="btn btn-find" target="_self">Registration for Patient</a>
         </li>
       </ul>
     </div>
