@@ -154,36 +154,25 @@
     <script type="text/javascript">
         emailjs.init('NMoxjJjtNgDkJKlaW');
     </script> 
-    <script>
-        function submitForm() {
-            // Get form values
-            var name = document.getElementById("name").value;
-            var age = document.getElementById("age").value;
-            var number = document.getElementById("number").value;
-            var address = document.getElementById("address").value;
-            var query = document.getElementById("query").value;
-            var disability = document.getElementById("disability").value;
-            var email = document.getElementById("email").value;
+  <script>
+    function submitForm() {
+        var formData = new FormData(document.getElementById("patientForm"));
     
-            // Send email using EmailJS
-            emailjs.send("service_a2ldpsr", "template_9i9muhp", {
-                name: name,
-                age: age,
-                number: number,
-                address: address,
-                query: query,
-                disability: disability,
-                email: email
-            })
-            .then(function(response) {
-                alert("Your registration has been submitted successfully. We will get back to you soon.");
-                // Reset the form
-                document.getElementById("patientForm").reset();
-            }, function(error) {
-                alert("Error occurred while submitting the form: " + error);
-                console.error("EmailJS error:", error);
-            });
-        }
+        fetch("registerpatient.php", {
+            method: "POST",
+            body: formData
+        })
+        .then(response => response.text())
+        .then(data => {
+            alert(data);
+            document.getElementById("patientForm").reset();
+        })
+        .catch(error => {
+            console.error("Error:", error);
+            alert("An error occurred while submitting the form.");
+        });
+    }
     </script>
+    
 </body>
 </html>
