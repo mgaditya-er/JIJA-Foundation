@@ -1,32 +1,32 @@
 <?php
-// Database connection parameters
+// Database connection details
 $host = 'localhost';
 $user = 'root';
-$password = 'root';
+$password = ''; // Change if needed
 $database = 'jija';
 
-// Connect to MySQL database
+// Create a connection
 $conn = new mysqli($host, $user, $password, $database);
 
-// Check connection
+// Check the connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Fetch doctors from the database
+// Fetch doctor names
 $sql = "SELECT name FROM doctor";
 $result = $conn->query($sql);
+
 $doctors = array();
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
-        $doctors[] = $row;
+        $doctors[] = $row['name'];
     }
 }
 
+// Return JSON response
+echo json_encode($doctors);
+
 // Close the connection
 $conn->close();
-
-// Return JSON response
-header('Content-Type: application/json');
-echo json_encode($doctors);
 ?>

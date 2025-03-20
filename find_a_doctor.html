@@ -93,34 +93,47 @@
 <!-- JavaScript -->
 <script>
   $(document).ready(function () {
-    // Load data from JSON file
-    $.getJSON("doctors.json", function (data) {
-      var options = '<option value="">Select Doctor name</option>';
-      data.doctors.forEach(function (doctor) {
-        options += '<option value="' + doctor.name + '">' + doctor.name + '</option>';
-      });
-      $('#specialtySelect').html(options);
+    // Fetch doctor names from PHP
+    $.ajax({
+      url: "fetch_doctors.php",
+      type: "GET",
+      dataType: "json",
+      success: function (data) {
+        var options = '<option value="">Select Doctor name</option>';
+        data.forEach(function (doctor) {
+          options += '<option value="' + doctor + '">' + doctor + '</option>';
+        });
+        $('#specialtySelect').html(options);
+      },
+      error: function () {
+        alert("Failed to load doctor names.");
+      }
     });
-
-    // Handle select change event
+  
+    // Fetch doctor details when selected
     $("#specialtySelect").change(function () {
       var selectedDoctor = $(this).val();
       if (selectedDoctor) {
-        $.getJSON("doctors.json", function (data) {
-          var doctor = data.doctors.find(function (doc) {
-            return doc.name === selectedDoctor;
-          });
-          if (doctor) {
-            var doctorInfoHtml = "<h2>" + selectedDoctor + "</h2>";
-            doctorInfoHtml += "<ul>";
-            doctorInfoHtml += "<li><strong>Name:</strong> " + doctor.name + "<br>";
-            doctorInfoHtml += "<strong>Location:</strong> " + doctor.location + "<br>";
-            doctorInfoHtml += "<strong>Specialty:</strong> " + doctor.specialty + "<br>";
-            doctorInfoHtml += "<strong>Contact:</strong> " + doctor.contact + "</li>";
-            doctorInfoHtml += "</ul>";
-            $("#doctorInfo").html(doctorInfoHtml);
-          } else {
-            $("#doctorInfo").html("<p>No information found for this doctor.</p>");
+        $.ajax({
+          url: "fetch_doctor_details.php",
+          type: "GET",
+          data: { name: selectedDoctor },
+          dataType: "json",
+          success: function (doctor) {
+            if (doctor) {
+              var doctorInfoHtml = "<h2>" + doctor.name + "</h2>";
+              doctorInfoHtml += "<ul>";
+              doctorInfoHtml += "<li><strong>Location:</strong> " + doctor.location + "<br>";
+              doctorInfoHtml += "<strong>Specialty:</strong> " + doctor.specialty + "<br>";
+              doctorInfoHtml += "<strong>Contact:</strong> " + doctor.contact + "</li>";
+              doctorInfoHtml += "</ul>";
+              $("#doctorInfo").html(doctorInfoHtml);
+            } else {
+              $("#doctorInfo").html("<p>No information found for this doctor.</p>");
+            }
+          },
+          error: function () {
+            $("#doctorInfo").html("<p>Error fetching doctor details.</p>");
           }
         });
       } else {
@@ -128,48 +141,18 @@
       }
     });
   });
-</script>
+  </script>
+  
 
 
   <!-- JavaScript -->
-  <script>
-    $(document).ready(function () {
-      // Load JSON file
-      $.getJSON("doctors.json", function (data) {
-        // Handle select change event
-        $("#specialtySelect").change(function () {
-          var selectedSpecialty = $(this).val();
-          if (selectedSpecialty) {
-            var doctors = data.doctors.filter(function (doctor) {
-              return doctor.name === selectedSpecialty;
-            });
-            if (doctors.length > 0) {
-              var doctorInfoHtml = "<h2>   " + selectedSpecialty + "</h2>";
-              doctorInfoHtml += "<ul>";
-              doctors.forEach(function (doctor) {
-                doctorInfoHtml += "<li><strong>Name:</strong> " + doctor.name + "<br>";
-                doctorInfoHtml += "<strong>Location:</strong> " + doctor.location + "<br>";
-                doctorInfoHtml += "<strong>Specialty:</strong> " + doctor.specialty + "<br>";
-                doctorInfoHtml += "<strong>Contact:</strong> " + doctor.contact + "</li>";
-              });
-              doctorInfoHtml += "</ul>";
-              $("#doctorInfo").html(doctorInfoHtml);
-            } else {
-              $("#doctorInfo").html("<p>No doctors found for this specialty.</p>");
-            }
-          } else {
-            $("#doctorInfo").empty();
-          }
-        });
-      });
-    });
-  </script>
+ 
 
 
 <!-- Contact the Doctor -->
 <div class="container mt-4">
   <h4>Contact the Doctor</h4>
-  <form action="#" method="post" class="mt-3">
+  <form id="contactForm" class="mt-3">
     <div class="mb-3">
       <label for="contactMessage" class="form-label">Message:</label>
       <textarea class="form-control" id="contactMessage" name="contactMessage" rows="3" required></textarea>
@@ -177,17 +160,18 @@
     <button type="submit" class="btn btn-primary">Send Message</button>
   </form>
   <div class="mt-3">
-    <p>To have a direct consultation, you can <strong><a href="https://womenwave.netlify.app/lobby.html" target="_blank" rel="noopener noreferrer">Join Lobby 🔗 </a></strong></p>
     <p>Our Team will get Connected and redirect you to respective doctor.</p>
-    <script>
-      // Generate a random room ID
-      var roomId = Math.floor(Math.random() * 10000); // Change 10000 to any maximum value you prefer
-    
-      // Display the room ID
-      document.write("<p>Room id = " + roomId + "</p>");
-    </script>
   </div>
 </div>
+
+<script>
+  document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form from actually submitting
+    alert("Message sent successfully! ✅");
+    document.getElementById("contactMessage").value = ""; // Clear message input
+  });
+</script>
+
 
   <!-- Footer -->
   <footer class="bg-success text-white bg-gradient">
