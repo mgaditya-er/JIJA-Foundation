@@ -2,7 +2,7 @@
 // Database connection parameters
 $host = 'localhost';
 $user = 'root';
-$password = '';
+$password = 'root';
 $database = 'jija';
 
 // Connect to MySQL database

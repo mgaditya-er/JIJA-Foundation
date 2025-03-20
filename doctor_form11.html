@@ -6,7 +6,7 @@
   <title>Doctor Form</title>
 </head>
 <body>
-  <h2>Doctor Information</h2>
+  <h2>Doctor Informationn</h2>
   <form id="doctorForm">
     <label for="name">Name:</label>
     <input type="text" id="name" required><br>
@@ -35,10 +35,12 @@
     connection.connect((err) => {
       if (err) {
         console.error('Error connecting to MySQL database:', err);
+        alert("connection failed")
         return;
       }
 
       console.log('Connected to MySQL database');
+      alert("connection success")
     });
 
     // Function to save doctor data to MySQL

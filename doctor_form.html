@@ -79,7 +79,7 @@
       </nav>
   <div class="container">
     <br>
-    <h2>Doctor Information</h2>
+    <h2>Doctor Informationn</h2>
     <form id="doctorForm">
       <div class="form-group">
         <label for="name">Name:</label>
@@ -137,7 +137,7 @@
       </div>
     </div>
   </footer>
-  <script>
+  <!-- <script>
     // Function to save doctor data to MySQL (Assuming MySQL connection logic is handled elsewhere)
     const saveDoctorData = (doctor) => {
       // Insert the doctor data into the database
@@ -167,6 +167,39 @@
       // Call the function to save doctor data
       saveDoctorData(doctor);
     });
-  </script>
+  </script> -->
+  <script>
+    document.getElementById("saveBtn").addEventListener("click", function () {
+        // Get form values
+        var name = document.getElementById("name").value;
+        var specialty = document.getElementById("specialty").value;
+        var location = document.getElementById("location").value;
+        var contact = document.getElementById("contact").value;
+    
+        // Create FormData object
+        var formData = new FormData();
+        formData.append("name", name);
+        formData.append("specialty", specialty);
+        formData.append("location", location);
+        formData.append("contact", contact);
+    
+        // Send data to PHP script using Fetch API
+        fetch("save_doctor.php", {
+            method: "POST",
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === "success") {
+                alert("Doctor registered successfully!");
+                document.getElementById("doctorForm").reset(); // Reset form after successful submission
+            } else {
+                alert("Error: " + data.message);
+            }
+        })
+        .catch(error => console.error("Error:", error));
+    });
+    </script>
+    
 </body>
 </html>
